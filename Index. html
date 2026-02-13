@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Proposal ❤️</title>
+
+<style>
+    body {
+        text-align: center;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        margin: 10px;
+        transition: 0.3s;
+    }
+
+    #yes {
+        background-color: #ff4d6d;
+        color: white;
+    }
+
+    #yes:hover {
+        background-color: #ff1e4d;
+        transform: scale(1.1);
+    }
+
+    #no {
+        background-color: white;
+        color: #ff4d6d;
+        position: absolute;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>💖 Happy Valentine's Day Jn Moi 💖</h1>
+<p>I have something special to ask you...</p>
+<h2>Will you be my Valentine? 💌</h2>
+
+<button id="yes" onclick="yesClicked()">Yes ❤️</button>
+<button id="no" onmouseover="moveButton()">No 😢</button>
+
+<script>
+function yesClicked() {
+    document.body.innerHTML =
+    "<h1>Yay!!! ❤️🥰<br>You just made me the happiest person alive 💖</h1>";
+}
+
+function moveButton() {
+    const btn = document.getElementById("no");
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
